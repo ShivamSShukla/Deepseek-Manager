@@ -1,0 +1,35 @@
+{
+  "name": "deepseek-manager",
+  "version": "1.0.0",
+  "description": "Export and manage DeepSeek conversations and projects",
+  "main": "js/main.js",
+  "scripts": {
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "rollup -c",
+    "build:css": "postcss css/*.css -d dist/css",
+    "dev": "npm run build -- --watch",
+    "test": "echo \"No tests specified\"",
+    "lint": "eslint js/**/*.js"
+  },
+  "keywords": [
+    "deepseek",
+    "export",
+    "chat",
+    "conversation",
+    "project",
+    "manager"
+  ],
+  "author": "DeepSeek Manager Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "eslint": "^8.0.0",
+    "postcss": "^8.4.0",
+    "postcss-cli": "^10.0.0",
+    "rollup": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.0"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1"
+  }
+}
