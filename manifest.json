@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail DOM Organizer",
+  "version": "1.0.0",
+  "description": "Privacy-first Gmail organizer using DOM analysis only",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
